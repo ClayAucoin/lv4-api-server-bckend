@@ -6,6 +6,7 @@ import { sendError } from "./utils/sendError.js"
 // import routes
 import rootRouter from "./routes/root.js"
 import moviesRouter from "./routes/movies.js"
+import findMovieRouter from "./routes/find-movie.js"
 
 const app = express();
 // const port = 3000;
@@ -17,6 +18,8 @@ app.use(express.urlencoded({ extended: true }))
 // use routes
 app.use("/", rootRouter)
 app.use("/movies", moviesRouter)
+app.use("/find-movie", findMovieRouter)
+
 
 export function globalErrorHandler(err, req, res, next) {
   const status = err.status || 500

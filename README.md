@@ -201,44 +201,39 @@ Ensures:
 
 ---
 
-## Endpoints
+## Endpoints <a id="endpoints"></a>
 
-### / <a id="get-root"></a>
+### GET /
 
-- #### GET /
-  Returns a simple HTML response confirming server status.
-
----
-
-### /movies/ <a id="get-movies"></a>
-
-- #### GET /movies/
-  Returns all movies.
+Returns a simple HTML response confirming server status.
 
 ---
 
-### /find-movie/ <a id="get-find-movie"></a>
+### GET /movies/
 
-- #### GET /find-movie/
-
-  - Alias route returning all movies.
-
-- #### GET /find-movie/:id
-  - Fetches a single movie by ID.
+Returns all movies.
 
 ---
 
-### /add-movie/ <a id="post-add-movie"></a>
+### GET /find-movie/
 
-- #### POST /add-movie/
-  Adds a movie using JSON request body.
+- Alias route returning all movies.
+
+### GET /find-movie/:id
+
+- Fetches a single movie by ID.
 
 ---
 
-### /del-movie/:id <a id="delete-del-movieid"></a>
+### POST /add-movie/
 
-- #### DELETE /del-movie/:id
-  Deletes a movie by ID.
+Adds a movie using JSON request body.
+
+---
+
+### DELETE /del-movie/:id
+
+Deletes a movie by ID.
 
 ---
 
